@@ -319,3 +319,57 @@ p {
     transform: rotate(-45deg) translate(5px, -6px);
   }
 }
+
+form {
+  margin-top: 30px;
+}
+
+form fieldset {
+  display: flex;
+}
+
+form legend {
+  opacity: 0.6;
+}
+
+.inputField {
+  width: 100%;
+  display: flex;
+  align-items: centera;
+  column-gap: 10px;
+}
+
+input,
+textarea {
+  width: 100%;
+  height: 30px;
+  background: transparent;
+  color: white;
+  /* padding: 0 10px; */
+  outline: none;
+  border: none;
+}
+
+/* input:hover,
+textarea:hover,
+input:focus,
+textarea:focus {
+  outline: none;
+  border: none;
+} */
+
+button {
+  width: 100%;
+  margin-top: 5px;
+  padding: 5px;
+  color: black;
+  transition: 0.3s ease;
+  border: 1px solid transparent;
+}
+
+button:hover {
+  letter-spacing: 1px;
+  color: white;
+  background: rgba(0, 0, 0, 0.927);
+  border: 1px solid grey;
+}
