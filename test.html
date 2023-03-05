@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="keywords" content="SHROND" />
+    <meta name="description" content=" //information about the website" />
+
+    <title>SHROND -</title>
+    <meta content="Author" name="Palalon, Marc Johnford Cagatin" />
+
+    <link rel="icon" type="image/png" href="favicon.png" />
+    <link rel="apple-touch-icon" type="image/png" href="favicon.png" />
+
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap");
+      .planet {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        background: radial-gradient(
+          circle at center,
+          rgb(23, 23, 23) 10%,
+          rgb(31, 31, 31) 40%,
+          rgb(41, 41, 41) 100%
+        );
+        position: relative;
+      }
+
+      .moon {
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background-color: white;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        animation: rotate 5s linear infinite;
+      }
+
+      @keyframes rotate {
+        0% {
+          transform: translate(-50%, -50%) rotate(0deg) translate(60px)
+            rotate(0deg);
+        }
+        100% {
+          transform: translate(-50%, -50%) rotate(360deg) translate(60px)
+            rotate(-360deg);
+        }
+      }
+    </style>
+
+    <link rel="stylesheet" href="style.css" />
+
+    <script
+      crossorigin
+      src="https://unpkg.com/react@18/umd/react.development.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/babel-standalone@6/babel.min.js"
+    ></script>
+    <script src="script.js" type="text/babel"></script>
+
+    <script
+      src="https://kit.fontawesome.com/b1fb81a378.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <header>
+      <a
+        href="https://www.facebook.com/shrond.fb08property/about"
+        class="shrondLogo"
+        rel="noopener noreferrer"
+        target="_blank"
+        style="font-family: 'Orbitron', sans-serif; text-decoration: none"
+      >
+        SHR<i class="fa-solid fa-code"></i>ND
+      </a>
+    </header>
+
+    <main>
+      <div class="planet">
+        <div class="moon"></div>
+      </div>
+    </main>
+
+    <footer></footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
