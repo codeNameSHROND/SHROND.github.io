@@ -390,7 +390,9 @@ footer p {
   text-indent: 0;
 }
 
-footer a {
+footer a,
+footer i {
   display: flex;
   align-items: center;
+  padding: 0;
 }
