@@ -339,8 +339,7 @@ form legend {
   column-gap: 10px;
 }
 
-input,
-textarea {
+input {
   width: 100%;
   background: transparent;
   color: white;
@@ -349,9 +348,7 @@ textarea {
 }
 
 input:hover,
-textarea:hover,
-input:focus,
-textarea:focus {
+input:focus {
   outline: none;
   border: none;
 }
@@ -370,4 +367,8 @@ button:hover {
   color: white;
   background: rgba(0, 0, 0, 0.927);
   border: 1px solid grey;
+}
+
+i {
+  padding: 5px;
 }
