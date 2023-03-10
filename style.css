@@ -314,10 +314,11 @@ p {
 
   nav .navUl {
     margin-top: 40px;
+    width: 100px;
     flex-direction: column;
     align-items: flex-start;
     row-gap: 10px;
-    background: rgba(0, 0, 0, 0.679);
+    background: rgba(0, 0, 0, 0.881);
     padding: 10px;
     transform: translateX(100%);
     opacity: 0;
@@ -350,7 +351,7 @@ p {
     cursor: pointer;
     padding: 10px;
     position: absolute;
-    right: 10%;
+    right: 10px;
     top: 10px;
   }
 
@@ -374,6 +375,10 @@ p {
   .menu-toggle.active span:last-of-type {
     transform: rotate(-45deg) translate(5px, -6px);
   }
+}
+
+#contact .description {
+  width: 320px;
 }
 
 form {
