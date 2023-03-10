@@ -12,7 +12,7 @@
 }
 
 a:hover {
-  text-decoration: underline;
+  /* text-decoration: underline; */
   color: rgba(255, 255, 255, 0.644);
 }
 
@@ -36,15 +36,20 @@ body {
 nav {
   position: fixed;
   width: 100%;
-  padding: 15px;
+  padding: 20px;
   z-index: 1000;
+}
+
+nav.changeBg {
+  background: black;
+  box-shadow: 0px 0px 2px 0px gray;
 }
 
 nav ul {
   display: flex;
-  column-gap: 30px;
+  column-gap: 50px;
   justify-content: flex-end;
-  margin-right: 40px;
+  margin-right: 60px;
 }
 
 a {
@@ -67,6 +72,21 @@ legend {
   font-weight: bold;
   padding: 10px;
 }
+
+/* .con1 {
+  background: url("images/sean-stratton-ObpCE_X3j6U-unsplash.jpg");
+  background-size: cover;
+  background-position: center;
+  width: 300px;
+  height: 300px;
+}
+.con2 {
+  background: url("images/cytonn-photography-n95VMLxqM2I-unsplash.jpg");
+  background-size: cover;
+  background-position: center;
+  width: 300px;
+  height: 300px;
+} */
 
 #home,
 #about,
@@ -106,7 +126,7 @@ legend {
   align-items: center;
   justify-content: space-around;
 }
-
+/* 
 .circle-container {
   padding: 100px;
   box-shadow: 20px 20px 10px rgba(249, 249, 249, 0.296);
@@ -206,7 +226,7 @@ legend {
     transform: translate(-50%, -50%) rotate(360deg) translate(60px)
       rotate(-360deg);
   }
-}
+} */
 
 h2 {
   font-size: clamp(20px, 5vw, 60px);
@@ -220,6 +240,36 @@ p {
   opacity: 0.6;
 }
 
+#skills .field {
+  display: flex;
+  justify-content: center;
+  column-gap: 10px;
+  flex-wrap: wrap;
+}
+
+#skills .field > * {
+  flex-basis: 30%;
+  /* adjust this value as needed */
+}
+
+@media screen and (max-width: 768px) {
+  #skills .field > * {
+    flex-basis: 48%;
+    /* adjust this value as needed */
+  }
+}
+
+@media screen and (max-width: 480px) {
+  #skills .field > * {
+    flex-basis: 100%;
+  }
+}
+
+#skills .field fieldset {
+  /* min-width: 200px; */
+  padding: 10px 40px;
+}
+
 .field ul {
   opacity: 0.8;
   display: flex;
@@ -228,9 +278,9 @@ p {
 }
 
 .description {
-  width: 50%;
+  width: 90%;
 }
-
+/* 
 @media (max-width: 850px) {
   .circle-container {
     display: none;
@@ -238,7 +288,7 @@ p {
   .description {
     width: 100%;
   }
-}
+} */
 
 @media (max-width: 490px) {
   a {
@@ -255,6 +305,11 @@ p {
     width: 150px;
     height: 200px;
     right: 0;
+  }
+
+  nav.changeBg {
+    background: rgba(0, 0, 0, 0);
+    box-shadow: 0px 0px 0px 0px rgba(128, 128, 128, 0);
   }
 
   nav .navUl {
