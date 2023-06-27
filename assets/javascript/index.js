@@ -12,7 +12,7 @@ $(document).ready(function () {
 
     if (target === "#contact") {
       console.log(target);
-      href = "assets/php/chatBox.php";
+      href = "https://shrond-projects.000webhostapp.com/SHROND/chatBox.php";
       window.open(href, "_blank");
       return false;
     }
@@ -57,3 +57,20 @@ if (navToggle) {
     navList.classList.toggle("active");
   });
 }
+
+function loadingAnimationControl(state) {
+  const loading = document.querySelector(".loading-animation");
+  if (!loading) {
+    return;
+  }
+  loading.classList.remove("hide");
+  if (state == "show") {
+    setTimeout(() => {
+      loading.classList.add("hide");
+    }, 900);
+  }
+}
+
+window.onload = function () {
+  loadingAnimationControl("show");
+};

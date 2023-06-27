@@ -91,6 +91,10 @@ i {
   margin: 0 4px;
 }
 
+button {
+  cursor: pointer;
+}
+
 .logo {
   font-size: 20px;
   font-family: var(--font-1);
@@ -287,44 +291,6 @@ h2 {
   font-family: var(--font-2);
 }
 
-#signUp,
-#signIn {
-  display: none;
-  background: rgba(0, 0, 0, 0.205);
-  padding: 20px 15px;
-  border-radius: 3px;
-  margin-top: 20px;
-  display: flex;
-  flex-direction: column;
-  row-gap: 15px;
-}
-
-.form input {
-  border-bottom: 1px solid var(--color-3);
-}
-
-.eye {
-  display: inline-block;
-  width: 30px;
-  cursor: pointer;
-}
-
-.form a {
-  color: var(--color-2);
-  font-family: var(--font-3);
-  font-size: 14px;
-  width: 100%;
-  text-align: right;
-  text-decoration: underline;
-  opacity: 0.6;
-  transition: 0.3s ease all;
-  cursor: pointer;
-}
-
-.form a:hover {
-  opacity: 100%;
-}
-
 @media screen and (max-width: 960px) {
   #services {
     padding-top: 40px;
@@ -429,20 +395,6 @@ h2 {
     flex-direction: column;
     row-gap: 10px;
   }
-}
-
-.form button {
-  height: 30px;
-  margin: 10px 0;
-  font-family: var(--font-3);
-  outline: none;
-  border: none;
-  transition: 0.3s ease all;
-}
-
-.form button:hover {
-  background: var(--color-3);
-  letter-spacing: 1px;
 }
 
 /* scroll bar */
