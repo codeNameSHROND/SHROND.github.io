@@ -12,7 +12,7 @@ $(document).ready(function () {
 
     if (target === "#contact") {
       console.log(target);
-      href = "https://shrond-projects.000webhostapp.com/SHROND/chatBox.php";
+      href = "https://shrond-projects.000webhostapp.com/SHROND/index.php";
       window.open(href, "_blank");
       return false;
     }
