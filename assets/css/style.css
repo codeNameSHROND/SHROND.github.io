@@ -219,6 +219,7 @@ main .home p.orContactMeWith {
 
 main .home .contact {
   margin: 30px 0;
+  margin-bottom: 20px;
   font-family: var(--font-3);
   display: flex;
   row-gap: 5px;
