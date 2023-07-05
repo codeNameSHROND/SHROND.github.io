@@ -212,6 +212,11 @@ main .home p.des {
   text-wrap: balance;
 }
 
+main .home p.orContactMeWith {
+  font-size: 12px;
+  margin-bottom: 10px;
+}
+
 main .home .contact {
   margin: 30px 0;
   font-family: var(--font-3);
@@ -227,7 +232,7 @@ main .home .contact p {
 }
 
 main .home .contact .input-field {
-  border: 1px solid white;
+  border: 1px solid var(--color-3);
   border-radius: 25px;
   display: flex;
   align-items: center;
@@ -287,6 +292,14 @@ input {
   border-radius: 50%;
   font-size: 20px;
   border: none;
+  background: var(--color-3);
+  border: 1px solid var(--color-3);
+  transition: 0.3s ease all;
+}
+
+.indexSender:hover {
+  background: transparent;
+  color: var(--color-3);
 }
 
 main .home .chat-shrond-text {
