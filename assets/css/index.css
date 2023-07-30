@@ -63,7 +63,7 @@
   flex-direction: row;
   justify-content: space-around;
   padding-top: 0;
-  min-height: calc(100vh - 60px);
+  min-height: calc(100vh - 0px);
 }
 
 #home .logo {
