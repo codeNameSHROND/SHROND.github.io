@@ -9,7 +9,9 @@ let totalResources = 0;
 
 function hideLoading() {
   loaderContainer.classList.add("hide");
-  main.classList.add("show");
+ // settimeout(() => {
+     main.classList.add("show");
+  //}, 1000);
 }
 
 function updateLoaded() {
@@ -18,9 +20,9 @@ function updateLoaded() {
   loadingPercentage.textContent = percentage + "%";
 
   if (loadedResources === totalResources) {
-    setTimeout(() => {
+    //setTimeout(() => {
       hideLoading();
-    }, 1000);
+    //}, 500);
   }
 }
 
