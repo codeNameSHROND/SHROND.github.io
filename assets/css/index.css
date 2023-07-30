@@ -48,7 +48,6 @@
 .main-contents {
   margin-top: 60px;
   overflow: hidden;
-  overflow-y: scroll;
   min-height: calc(100vh - 60px);
 }
 
