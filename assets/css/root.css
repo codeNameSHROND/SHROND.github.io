@@ -1,0 +1,141 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --color-1: black;
+  --color-2: white;
+  --shrond-color: #00a2ff;
+
+  --font-1: "Roboto", Arial, sans-serif;
+  --font-2: "Open Sans", Arial, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 100px;
+}
+
+body {
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  background: var(--color-1);
+  color: var(--color-2);
+  font-family: var(--font-2);
+}
+
+body::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("../images/martin-martz-OR8DEvVhym0-unsplash.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: -1;
+  opacity: 0.7;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.logo {
+  font-family: var(--font-1);
+  letter-spacing: 1px;
+  color: var(--shrond-color);
+  cursor: pointer;
+  width: fit-content;
+}
+
+button,
+.home-options,
+.global-option {
+  cursor: pointer;
+  font-size: 18px;
+}
+
+/* input autocomplete */
+
+/* For Chrome, Safari, and Opera */
+input:-webkit-autofill,
+textarea:-webkit-autofill,
+select:-webkit-autofill {
+  border: none;
+  -webkit-text-fill-color: white;
+  -webkit-box-shadow: 0 0 0px 1000px #00000000 inset;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+/* For Firefox */
+input:-moz-autofill,
+textarea:-moz-autofill,
+select:-moz-autofill {
+  border: none;
+  color: white;
+  background-color: transparent !important;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+/* For Edge and IE */
+input:-ms-input-placeholder,
+textarea:-ms-input-placeholder,
+select:-ms-input-placeholder {
+  color: white;
+}
+
+/* scroll bar */
+
+/* For Chrome, Edge, and Safari */
+::-webkit-scrollbar {
+  height: 2px;
+  width: 2px; /* Adjust the width to make it thinner */
+}
+
+::-webkit-scrollbar-track {
+  background: transparent; /* Color of the track */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--shrond-color); /* Color of the thumb */
+  border-radius: 3px; /* Rounded corners for the thumb */
+}
+
+/* For Firefox */
+/* Note: Firefox does not support changing the color of the scrollbar thumb */
+
+/* For Mozilla Firefox */
+@-moz-document url-prefix() {
+  scrollbar-color: transparent transparent; /* Color of the track and thumb */
+  scrollbar-width: thin; /* Adjust the width to make it thinner */
+}
+
+/* For Internet Explorer and Edge */
+/* Note: IE and old Edge versions use a different syntax */
+/* Note: Microsoft Edge (Chromium-based) supports the WebKit syntax mentioned earlier */
+
+/* Internet Explorer 10+ */
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  /* Note: IE only supports changing the color of the scrollbar track */
+  scrollbar-face-color: transparent; /* Color of the track */
+}
+
+/* Old Microsoft Edge (EdgeHTML) */
+@supports (-ms-overflow-style: -ms-autohiding-scrollbar) {
+  /* Note: Old Edge only supports changing the color of the scrollbar track */
+  scrollbar-face-color: transparent; /* Color of the track */
+}
