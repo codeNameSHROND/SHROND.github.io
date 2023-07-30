@@ -64,7 +64,8 @@
   justify-content: space-around;
   padding-top: 0;
   background: transparent;
-  min-height: calc(100vh - 100px);
+  min-height: calc(100vh - 0px);
+  padding-bottom: 60px;
 }
 
 #home .logo {
