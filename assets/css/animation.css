@@ -92,3 +92,9 @@ button:hover {
     transform: translateY(0);
   }
 }
+
+@keyframes fillBar {
+  to {
+    transform: scaleX(1);
+  }
+}

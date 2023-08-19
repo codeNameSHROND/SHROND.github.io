@@ -7,7 +7,6 @@
   margin: 0;
   padding: 0;
   border: none;
-  letter-spacing: 1px;
 }
 
 :root {
@@ -26,7 +25,7 @@
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 100px;
+  scroll-padding-top: 60px;
 }
 
 body {
@@ -92,6 +91,10 @@ input:focus {
 
 ::placeholder {
   color: rgb(173, 173, 173);
+}
+
+p {
+  font-size: 18px;
 }
 
 .text-with-shadow-1 {
