@@ -1,45 +1,33 @@
-function makeThisActive(element, className) {
-  const links = document.querySelectorAll(".global-option");
-  links.forEach((link) => {
-    if (link !== element && !link.classList.contains(className)) {
-      link.classList.remove("active");
-    } else {
-      link.classList.add("active");
-      if (className != "home") {
-        document.querySelector(".normal-nav").classList.add("show");
-      } else {
-        document.querySelector(".normal-nav").classList.remove("show");
+let underlined = document.querySelector("nav ul li a:first-child");
+underlined.classList.add("underline");
+
+// Get all the navigation links with the "nav-a" class
+const navLinks = document.querySelectorAll(".nav-a");
+
+// Function to check if an element is at least partially in the viewport
+function isElementInViewport(el) {
+  const rect = el.getBoundingClientRect();
+  return rect.top <= window.innerHeight && rect.bottom >= 0;
+}
+
+// Function to update the underlined link based on the scroll position
+function updateUnderlinedLink() {
+  navLinks.forEach((link) => {
+    const sectionId = link.getAttribute("href");
+    const section = document.querySelector(sectionId);
+
+    if (section && isElementInViewport(section)) {
+      if (underlined) {
+        underlined.classList.remove("underline");
       }
-      console.log(link);
+      link.classList.add("underline");
+      underlined = link;
     }
   });
 }
 
-const spans = document.querySelectorAll(".word span");
+// Initial call to set the underlined link on page load
+updateUnderlinedLink();
 
-spans.forEach((span, idx) => {
-  span.addEventListener("mouseenter", (e) => {
-    e.target.classList.add("active");
-  });
-  span.addEventListener("animationend", (e) => {
-    e.target.classList.remove("active");
-  });
-
-  setTimeout(() => {
-    span.classList.add("active");
-  }, 750 * (idx + 1));
-});
-
-setTimeout(() => {
-  const elements = document.querySelectorAll(".fade-group-8s");
-  elements.forEach((element) => {
-    element.classList.add("transform");
-  });
-}, 8000);
-
-function toggleMenu() {
-  const menuItems = document.querySelector(".menu-items");
-  const toggleBtn = document.querySelector(".toggle-btn");
-  menuItems.classList.toggle("show");
-  toggleBtn.classList.toggle("active");
-}
+// Listen for scroll events and update the underlined link accordingly
+window.addEventListener("scroll", updateUnderlinedLink);

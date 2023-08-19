@@ -1,0 +1,179 @@
+nav {
+  position: fixed;
+  z-index: 999;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: rgb(32, 32, 32);
+  padding: 15px 0;
+}
+
+nav a {
+  color: var(--color-2);
+  position: relative;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+nav .nav-logo {
+  color: var(--shrond-color);
+  font-weight: 900;
+  font-size: 25px;
+  font-family: var(--font-1);
+  margin-left: 20px;
+  transition: 0.3s ease;
+}
+
+nav ul {
+  display: flex;
+  justify-content: space-around;
+  column-gap: 30px;
+  padding-right: 20px;
+}
+
+nav ul li {
+  padding: 5px;
+}
+
+nav li:last-child {
+  background: var(--color-3);
+}
+
+nav li:last-child a {
+  opacity: 100%;
+  padding: 0 4px;
+}
+
+.page {
+  min-height: 100vh;
+  padding-top: 10px;
+}
+
+#home {
+  display: flex;
+}
+
+#home .col-1,
+#home .col-2 {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+#home .col-1 {
+  z-index: 2;
+  /* min-width: 250px;
+  width: 100%; */
+  padding: 10px;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-left: 20px;
+}
+
+#home .col-1 h1 {
+  padding: 0 10px;
+  background: linear-gradient(to left, rgb(61, 61, 61), rgb(22, 22, 22));
+}
+
+#home h1 span {
+  white-space: nowrap;
+  margin: 0 5px;
+}
+
+#home .col-1 h1 span:nth-child(2) {
+  color: var(--color-3);
+  font-size: 60px;
+}
+
+#home .col-1 h1 span:last-child {
+  color: var(--shrond-color);
+  font-size: 100px;
+  font-weight: 900;
+  font-family: var(--font-1);
+}
+
+#home .col-1 p {
+  margin-top: 20px;
+  padding-left: 10px;
+  font-size: 20px;
+  width: 100%;
+}
+
+#home .col-2 {
+  background: linear-gradient(
+    to right,
+    transparent,
+    rgba(255, 255, 255, 0.808)
+  ); /* Leftward fade-in gradient */
+  border-top-right-radius: 50px;
+  border-bottom-right-radius: 50%;
+  padding: 10px;
+  height: 100vh;
+  padding-left: 20px;
+}
+
+#home .col-2 img {
+  border-radius: 50%;
+  border-top-right-radius: 50px;
+}
+
+#home .input-field {
+  margin-top: 60px;
+  width: 60%;
+  background: linear-gradient(to left, rgb(61, 61, 61), rgb(22, 22, 22));
+  padding: 10px;
+  display: flex;
+  align-content: center;
+  border-top-right-radius: 27px;
+  border-bottom-right-radius: 27px;
+}
+
+.input-field label {
+  position: absolute;
+  background: transparent;
+  margin-top: -30px;
+  margin-left: -5px;
+  color: var(--shrond-color);
+  font-size: 25px;
+  font-weight: 900;
+  letter-spacing: 2px;
+}
+
+.input-field input {
+  background: transparent;
+  color: var(--color-2);
+  padding: 5px;
+  font-size: 20px;
+}
+
+.input-field input {
+  width: 100%;
+  border-bottom: 1px solid var(--shrond-color);
+}
+
+.social {
+  margin-top: 20px;
+  margin-left: -40px;
+}
+
+.social ul {
+  width: 200px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.social i {
+  color: var(--color-2);
+  font-size: 35px;
+  width: 20px;
+}
+
+.line {
+  width: 100%;
+  height: 10px;
+  background: rgb(32, 32, 32);
+  margin: 25px 0;
+  opacity: 0.5;
+}

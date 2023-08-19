@@ -1,16 +1,24 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
 
-* {
+*,
+*::before,
+*::after {
   margin: 0;
   padding: 0;
+  border: none;
+  letter-spacing: 1px;
 }
 
 :root {
   --color-1: black;
   --color-2: white;
+  --color-3: orangered;
   --shrond-color: #00a2ff;
+
+  --facebook-color: #1877f2;
+  --twitter-color: #1da1f2;
+  --youtube-color: #ff0000;
 
   --font-1: "Roboto", Arial, sans-serif;
   --font-2: "Open Sans", Arial, sans-serif;
@@ -25,11 +33,19 @@ body {
   box-sizing: border-box;
   width: 100%;
   height: 100%;
-  background: var(--color-1);
-  color: var(--color-2);
   font-family: var(--font-2);
-}
+  color: var(--color-2);
+  /* background: var(--color-2); */
+  /* background: rgb(12, 12, 12); */
 
+  background: rgb(43, 43, 43);
+
+  user-select: none; /* Standard syntax */
+  -webkit-user-select: none; /* Safari and older webkit-based browsers */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+}
+/* 
 body::before {
   content: "";
   display: block;
@@ -42,10 +58,12 @@ body::before {
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
+  background: black;
   z-index: -1;
-  opacity: 0.7;
-}
+  opacity: 0.8;
+} */
 
+ul,
 li {
   list-style: none;
 }
@@ -54,19 +72,54 @@ a {
   text-decoration: none;
 }
 
-.logo {
-  font-family: var(--font-1);
-  letter-spacing: 1px;
-  color: var(--shrond-color);
+button {
   cursor: pointer;
-  width: fit-content;
+  font-size: 20px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: linear-gradient(to left, rgb(60, 60, 60), rgb(57, 57, 57));
 }
 
-button,
-.home-options,
-.global-option {
-  cursor: pointer;
-  font-size: 18px;
+button i {
+  color: var(--shrond-color);
+}
+
+input:focus {
+  border: none;
+  outline: none;
+}
+
+::placeholder {
+  color: rgb(173, 173, 173);
+}
+
+.text-with-shadow-1 {
+  font-weight: 100;
+  text-shadow: -4px 4px 0px #000, 0px 2px 0px #000, 0px 3px 0px #000,
+    0px 4px 0px #000, 0px 5px 10px rgba(0, 0, 0, 0.6);
+}
+
+.text-with-shadow-2 {
+  font-weight: 100;
+  text-shadow: -2px 2px 0px #000, 0px 2px 5px rgba(0, 0, 0, 0.6);
+}
+
+.with-box-shadow-1 {
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.774);
+}
+
+.with-box-shadow-2 {
+  box-shadow: -20px 20px 10px rgba(0, 0, 0, 0.774);
+}
+
+.with-box-shadow-3 {
+  box-shadow: -5px 5px 10px rgba(0, 0, 0, 0.774);
+}
+
+.with-box-shadow-4 {
+  box-shadow: 0px -5px 10px rgba(0, 0, 0, 0.774),
+    0px 5px 10px rgba(0, 0, 0, 0.774);
 }
 
 /* input autocomplete */
@@ -108,10 +161,11 @@ select:-ms-input-placeholder {
 
 ::-webkit-scrollbar-track {
   background: transparent; /* Color of the track */
+  background: var(--shrond-color);
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: var(--shrond-color); /* Color of the thumb */
+  background-color: var(--color-3); /* Color of the thumb */
   border-radius: 3px; /* Rounded corners for the thumb */
 }
 
