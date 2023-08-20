@@ -80,7 +80,7 @@ nav li:last-child a {
 
 #home .col-1 h1 {
   padding: 0 10px;
-  background: linear-gradient(to right, transparent, rgba(83, 83, 83, 0.808));
+  background: linear-gradient(to left, rgb(61, 61, 61), rgb(27, 27, 27));
 }
 
 #home h1 span {
