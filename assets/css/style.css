@@ -80,7 +80,7 @@ nav li:last-child a {
 
 #home .col-1 h1 {
   padding: 0 10px;
-  background: linear-gradient(to left, rgb(61, 61, 61), rgb(22, 22, 22));
+  background: linear-gradient(to right, transparent, rgba(83, 83, 83, 0.808));
 }
 
 #home h1 span {
@@ -101,9 +101,9 @@ nav li:last-child a {
 }
 
 #home .col-1 p {
-  margin-top: 20px;
-  padding-left: 10px;
-  font-size: 20px;
+  text-align: center;
+  margin-top: 30px;
+  font-size: 24px;
   width: 100%;
 }
 
@@ -118,7 +118,7 @@ nav li:last-child a {
 }
 
 #home .col-2 img {
-  width: 85%;
+  width: 90%;
 }
 
 #home .col-2 img {
@@ -216,6 +216,7 @@ nav li:last-child a {
 
 #about .col-1 p {
   margin-top: 10px;
+  line-height: 25px;
 }
 
 #about .col-2 {
@@ -242,6 +243,7 @@ nav li:last-child a {
 
 #skills .col-2 p {
   background: transparent;
+  line-height: 25px;
 }
 
 .center-skills {
