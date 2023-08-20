@@ -1,0 +1,198 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+:root {
+  --color-1: black;
+  --color-2: white;
+  --color-3: orangered;
+  --shrond-color: #00a2ff;
+
+  --facebook-color: #1877f2;
+  --twitter-color: #1da1f2;
+  --youtube-color: #ff0000;
+
+  --font-1: "Roboto", Arial, sans-serif;
+  --font-2: "Open Sans", Arial, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 60px;
+}
+
+body {
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  font-family: var(--font-2);
+  color: var(--color-2);
+  /* background: var(--color-2); */
+  /* background: rgb(12, 12, 12); */
+
+  background: rgb(43, 43, 43);
+
+  user-select: none; /* Standard syntax */
+  -webkit-user-select: none; /* Safari and older webkit-based browsers */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+}
+/* 
+body::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("../images/martin-martz-OR8DEvVhym0-unsplash.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background: black;
+  z-index: -1;
+  opacity: 0.8;
+} */
+
+ul,
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+  font-size: 20px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: linear-gradient(to left, rgb(60, 60, 60), rgb(57, 57, 57));
+}
+
+button i {
+  color: var(--shrond-color);
+}
+
+input:focus {
+  border: none;
+  outline: none;
+}
+
+::placeholder {
+  color: rgb(173, 173, 173);
+}
+
+p {
+  font-size: 18px;
+}
+
+.text-with-shadow-1 {
+  font-weight: 100;
+  text-shadow: -4px 4px 0px #000, 0px 2px 0px #000, 0px 3px 0px #000,
+    0px 4px 0px #000, 0px 5px 10px rgba(0, 0, 0, 0.6);
+}
+
+.text-with-shadow-2 {
+  font-weight: 100;
+  text-shadow: -2px 2px 0px #000, 0px 2px 5px rgba(0, 0, 0, 0.6);
+}
+
+.with-box-shadow-1 {
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.774);
+}
+
+.with-box-shadow-2 {
+  box-shadow: -20px 20px 10px rgba(0, 0, 0, 0.774);
+}
+
+.with-box-shadow-3 {
+  box-shadow: -5px 5px 10px rgba(0, 0, 0, 0.774);
+}
+
+.with-box-shadow-4 {
+  box-shadow: 0px -5px 10px rgba(0, 0, 0, 0.774),
+    0px 5px 10px rgba(0, 0, 0, 0.774);
+}
+
+/* input autocomplete */
+
+/* For Chrome, Safari, and Opera */
+input:-webkit-autofill,
+textarea:-webkit-autofill,
+select:-webkit-autofill {
+  border: none;
+  -webkit-text-fill-color: white;
+  -webkit-box-shadow: 0 0 0px 1000px #00000000 inset;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+/* For Firefox */
+input:-moz-autofill,
+textarea:-moz-autofill,
+select:-moz-autofill {
+  border: none;
+  color: white;
+  background-color: transparent !important;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+/* For Edge and IE */
+input:-ms-input-placeholder,
+textarea:-ms-input-placeholder,
+select:-ms-input-placeholder {
+  color: white;
+}
+
+/* scroll bar */
+
+/* For Chrome, Edge, and Safari */
+::-webkit-scrollbar {
+  height: 2px;
+  width: 2px; /* Adjust the width to make it thinner */
+}
+
+::-webkit-scrollbar-track {
+  background: transparent; /* Color of the track */
+  background: var(--shrond-color);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--color-3); /* Color of the thumb */
+  border-radius: 3px; /* Rounded corners for the thumb */
+}
+
+/* For Firefox */
+/* Note: Firefox does not support changing the color of the scrollbar thumb */
+
+/* For Mozilla Firefox */
+@-moz-document url-prefix() {
+  scrollbar-color: transparent transparent; /* Color of the track and thumb */
+  scrollbar-width: thin; /* Adjust the width to make it thinner */
+}
+
+/* For Internet Explorer and Edge */
+/* Note: IE and old Edge versions use a different syntax */
+/* Note: Microsoft Edge (Chromium-based) supports the WebKit syntax mentioned earlier */
+
+/* Internet Explorer 10+ */
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  /* Note: IE only supports changing the color of the scrollbar track */
+  scrollbar-face-color: transparent; /* Color of the track */
+}
+
+/* Old Microsoft Edge (EdgeHTML) */
+@supports (-ms-overflow-style: -ms-autohiding-scrollbar) {
+  /* Note: Old Edge only supports changing the color of the scrollbar track */
+  scrollbar-face-color: transparent; /* Color of the track */
+}
