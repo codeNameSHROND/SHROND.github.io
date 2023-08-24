@@ -47,6 +47,8 @@ nav li:last-child a {
 
 .page {
   min-height: 60vh;
+  opacity: 0;
+  transition: 0.5s ease;
 }
 
 #home {

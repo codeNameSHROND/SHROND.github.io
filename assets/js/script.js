@@ -1,8 +1,10 @@
 let underlined = document.querySelector("nav ul li a:first-child");
 underlined.classList.add("underline");
+let currentPage = null;
 
 // Get all the navigation links with the "nav-a" class
 const navLinks = document.querySelectorAll(".nav-a");
+const pages = document.querySelectorAll(".page");
 
 // Function to check if an element is at least partially in the viewport
 function isElementInViewport(el) {
@@ -16,20 +18,35 @@ function updateUnderlinedLink() {
     const sectionId = link.getAttribute("href");
     const section = document.querySelector(sectionId);
 
-    if (section && isElementInViewport(section)) {
+    if (section && isElementInViewport(section) && sectionId != currentPage) {
       if (underlined) {
         underlined.classList.remove("underline");
       }
       link.classList.add("underline");
       underlined = link;
+
+      pages.forEach((element) => {
+        element.style.opacity = 0;
+      });
+
+      currentPage = sectionId;
+      document.querySelector(currentPage).style.opacity =
+        calculateOpacity(section);
     }
   });
 }
 
-// Initial call to set the underlined link on page load
+// Calculate opacity based on the percentage of the page view
+function calculateOpacity(element) {
+  const rect = element.getBoundingClientRect();
+  const percentVisible = ((window.innerHeight - rect.top) / rect.height) * 100;
+  return percentVisible;
+}
+
+// Initial call to set the underlined link and opacity on page load
 updateUnderlinedLink();
 
-// Listen for scroll events and update the underlined link accordingly
+// Listen for scroll events and update the underlined link and opacity accordingly
 window.addEventListener("scroll", updateUnderlinedLink);
 
 window.onload = function () {
