@@ -56,10 +56,24 @@ function updateSkillBars() {
 
   skillInnerBars.forEach((innerBar) => {
     const randomWidth = Math.floor(Math.random() * (100 - 40 + 1)) + 40;
-    innerBar.style.width = `${randomWidth}%`;
+    animateBar(innerBar, randomWidth);
   });
 }
 
+function animateBar(innerBar, targetWidth) {
+  let currentWidth = 0;
+
+  function update() {
+    currentWidth += 1; // Adjust the increment as needed
+    innerBar.style.transform = `scaleX(${currentWidth / 100})`;
+
+    if (currentWidth < targetWidth) {
+      requestAnimationFrame(update);
+    }
+  }
+
+  update();
+}
 window.onload = function () {
   window.scrollTo(0, 0);
   // setTimeout(function () {
