@@ -5,6 +5,7 @@ let currentPage = null;
 // Get all the navigation links with the "nav-a" class
 const navLinks = document.querySelectorAll(".nav-a");
 const pages = document.querySelectorAll(".page");
+const skillChart = document.querySelector(".skills-chart");
 
 // Function to check if an element is at least partially in the viewport
 function isElementInViewport(el) {
@@ -50,9 +51,21 @@ updateUnderlinedLink();
 // Listen for scroll events and update the underlined link and opacity accordingly
 window.addEventListener("scroll", updateUnderlinedLink);
 
+function updateSkillBars() {
+  const skillInnerBars = document.querySelectorAll(".skill__inner-bar");
+
+  skillInnerBars.forEach((innerBar) => {
+    const randomWidth = Math.floor(Math.random() * (100 - 40 + 1)) + 40;
+    innerBar.style.width = `${randomWidth}%`;
+  });
+}
+
 window.onload = function () {
   window.scrollTo(0, 0);
-  setTimeout(function () {
-    alert("This website is under development...");
+  // setTimeout(function () {
+  //   alert("This website is under development...");
+  // }, 5000);
+  setInterval(() => {
+    updateSkillBars();
   }, 5000);
 };

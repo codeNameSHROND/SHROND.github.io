@@ -99,12 +99,6 @@ button:hover {
   }
 }
 
-@keyframes showText2 {
-  100% {
-    opacity: 1;
-  }
-}
-
 .dotted {
   background-image: radial-gradient(#646464 5%, transparent 0);
   background-size: 15px 15px;
