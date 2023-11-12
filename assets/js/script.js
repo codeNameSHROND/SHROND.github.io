@@ -25,13 +25,14 @@ function updateUnderlinedLink() {
       link.classList.add("underline");
       underlined = link;
 
+      let pageOpacity = calculateOpacity(section);
+
       pages.forEach((element) => {
-        element.style.opacity = 0;
+        element.style.opacity = 100 - pageOpacity + "%";
       });
 
       currentPage = sectionId;
-      document.querySelector(currentPage).style.opacity =
-        calculateOpacity(section);
+      document.querySelector(currentPage).style.opacity = pageOpacity + "%";
     }
   });
 }
