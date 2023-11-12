@@ -76,9 +76,9 @@ function animateBar(innerBar, targetWidth) {
 }
 window.onload = function () {
   window.scrollTo(0, 0);
-  // setTimeout(function () {
-  //   alert("This website is under development...");
-  // }, 5000);
+  setTimeout(function () {
+    alert("This website is under development...");
+  }, 5000);
   setInterval(() => {
     updateSkillBars();
   }, 5000);
