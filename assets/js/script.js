@@ -52,4 +52,7 @@ window.addEventListener("scroll", updateUnderlinedLink);
 
 window.onload = function () {
   window.scrollTo(0, 0);
+  setTimeout(function () {
+    alert("This website is under development...");
+  }, 5000);
 };
