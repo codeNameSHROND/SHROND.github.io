@@ -48,7 +48,7 @@ nav li:last-child a {
 .page {
   min-height: 60vh;
   opacity: 0;
-  transition: 0.5s ease;
+  transition: 0.5s ease-in-out;
 }
 
 #home {
@@ -89,7 +89,7 @@ nav li:last-child a {
   white-space: nowrap;
   margin: 0 5px;
   opacity: 0.9;
-  transition: 0.3s ease;
+  transition: 0.3s ease-in-out;
 }
 
 #home h1 span:hover {
