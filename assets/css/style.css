@@ -340,7 +340,7 @@ nav li:last-child a {
 /* services  */
 
 #services {
-  min-height: 60vh;
+  /* min-height: 60vh; */
 }
 
 #services .col-2 {
